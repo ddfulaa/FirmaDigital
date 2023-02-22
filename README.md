@@ -13,15 +13,15 @@ Dentro de la carpeta Ejecutable se encuentran los archivos "archivo.txt", "valor
 Para utilizar el módulo, primero es necesario importarlo en un archivo de Haskell y luego llamar a las funciones firmar o verificar. La función firmar toma un mensaje de texto y dos enteros como argumentos, el valor público y la clave privada, y devuelve la firma del mensaje como un entero. La función verificar toma un mensaje de texto, una firma y dos enteros como argumentos, el valor público y la clave pública, y devuelve un valor booleano que indica si la firma es válida o no.
 También se proporciona una interfaz de línea de comandos para facilitar el uso del módulo. Desde la línea de comandos, se puede firmar un archivo utilizando la opción --firmar y verificar una firma utilizando la opción --verificar. Por ejemplo:
 
-$ ./firmadigital.exe Main.hs --firmar archivo.txt valor_publico.txt clave_privada.txt
+    $ ./firmadigital.exe Main.hs --firmar archivo.txt valor_publico.txt clave_privada.txt
 
 Esto generará una firma del archivo archivo.txt utilizando el valor público y la clave privada especificados en los archivos valor_publico.txt y clave_privada.txt, respectivamente. La firma se guardará en un archivo llamado firma.txt.
 
-$ ./firmadigital.exe Main.hs --verificar archivo.txt firma.txt valor_publico.txt clave_publica.txt
+    $ ./firmadigital.exe Main.hs --verificar archivo.txt firma.txt valor_publico.txt clave_publica.txt
 
 Esto verificará si la firma en el archivo firma.txt corresponde al archivo archivo.txt, utilizando el valor público y la clave pública especificados en los archivos valor_publico.txt y clave_publica.txt, respectivamente.
 
-#DEPENDENCIAS
+# DEPENDENCIAS
 El módulo depende de las siguientes bibliotecas de Haskell:
 
 Data.Digest.SHA256
@@ -33,12 +33,12 @@ Codec.Encryption.RSA.NumberTheory
 
 La biblioteca Data.Hex es una biblioteca oculta, por lo que es necesario incluir el flag <<-package hex>> al compilar el proyecto o al usarlo desde GHCI.
 
-#COMPILACIÓN
+# COMPILACIÓN
 Se uso la herramienta CABAL para gestionar el proyecto. Para compilarlo basta simplemente con ir a la carpeta "Código Fuente/firmadigital" y ejecutar en una terminal lo siguiente:
 
-$ cabal build
+    $ cabal build
 
-#LICENCIA
+# LICENCIA
 Este trabajo está bajo una Licencia Creative Commons Atribución 4.0 Internacional.
 Usted es libre de:
 - Compartir — copiar y redistribuir el material en cualquier medio o formato
